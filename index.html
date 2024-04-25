@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>BudgetGest</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <div class="total-amount-container">
+                    <h3>Budget</h3>
+                    <p class="hide error" id="budget-error">
+                        La valeur ne peut pas être vide ou négative
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Entrez le montant total">
+                    <button class="submit" id="total-amount-button">
+                        Définir le budget
+                    </button>
+                </div>
+
+                <div class="user-amount-container">
+                    <h3>Dépenses</h3>
+                    <p class="hide error" id="product-title-error">
+                        Les valeurs ne peuvent pas être vides
+                    </p>
+                    <input type="text" class="product-title" id="product-title" placeholder="Entrez le titre du produit">
+                    <input type="number" id="user-amount" placeholder="Entrez le coût du produit">
+                    <button class="submit" id="check-amount">Vérifier le montant</button>
+                </div>
+            </div>
+
+            <div class="output-container flex-space">
+                <div>
+                    <p>Budget total</p>
+                    <span id="amount">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <p>Dépenses</p>
+                    <span id="expenditure-value">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <p>Solde</p>
+                    <span id="balance-amount">
+                        0
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <h3>Liste des dépenses</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
